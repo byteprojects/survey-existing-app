@@ -1,0 +1,14 @@
+[
+    {
+        "name": "stageOne",
+        "policy": "OR('Org4MSP.member')",
+        "requiredPeerCount": 0,
+        "maxPeerCount": 1,
+        "blockToLive": 1000000,
+        "memberOnlyRead": false,
+        "memberOnlyWrite": true,
+        "endorsementPolicy": {
+        "signaturePolicy": "OR('Org4MSP.member')"
+        }
+    }
+]

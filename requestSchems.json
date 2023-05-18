@@ -1,0 +1,35 @@
+{
+    "type": "object",
+    "required": [
+      "surveyID",
+      "owner"
+    ],
+    "properties": {
+      "surveyID": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 255,
+        "errorMessage": "VALIDATION_ERROR Invalid surveyID"
+      },
+      "owner": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 255,
+          "errorMessage": "VALIDATION_ERROR Invalid owner"
+      },
+      "docType": {
+        "type": "string",
+        "const": "request",
+        "default": "request",
+        "errorMessage": "VALIDATION_ERROR Invalid docType"
+      }
+    },
+    "additionalProperties": false,
+    "errorMessage": {
+      "required": {
+        "surveyID": "surveyID is required",
+        "owner": "owner is required"
+      },
+      "additionalProperties": "only surveyID and owner are allowed"
+    }
+  }

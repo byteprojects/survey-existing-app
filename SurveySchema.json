@@ -1,0 +1,58 @@
+{
+  "type": "object",
+  "required": [
+    "type",
+    "question",
+    "title"
+  ],
+  "properties": {
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 255,
+      "errorMessage": "VALIDATION_ERROR Invalid title"
+    },
+    "type": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 255,
+      "errorMessage": "VALIDATION_ERROR Invalid type"
+    },
+    "question": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "question": "",
+        "answer1": "",
+        "answer2": "",
+        "answer3": ""
+      },
+      "errorMessage": "VALIDATION_ERROR Invalid question"
+    },
+    "answersRecord": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "answer1": "",
+        "answer2": "",
+        "answer3": ""
+      },
+      "errorMessage": "VALIDATION_ERROR Invalid question"
+    },
+    "docType": {
+      "type": "string",
+      "const": "survey",
+      "default": "survey",
+      "errorMessage": "VALIDATION_ERROR Invalid docType"
+    }
+  },
+  "additionalProperties": false,
+  "errorMessage": {
+    "required": {
+      "title": "title is required",
+      "type": "type is required",
+      "question": "question is required"
+    },
+    "additionalProperties": "only title, type and question are allowed"
+  }
+}

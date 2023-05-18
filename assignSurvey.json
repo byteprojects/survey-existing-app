@@ -1,0 +1,29 @@
+{
+    "type": "object",
+    "required": [
+      "surveyID",
+      "surveyor"
+    ],
+    "properties": {
+      "surveyID": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 255,
+        "errorMessage": "VALIDATION_ERROR Invalid surveyID"
+      },
+      "surveyor": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 255,
+        "errorMessage": "VALIDATION_ERROR Invalid surveyor"
+      }
+    },
+    "additionalProperties": false,
+    "errorMessage": {
+      "required": {
+        "surveyID": "surveyID is required",
+        "surveyor": "surveyor is required"
+      },
+      "additionalProperties": "only surveyID and surveyor are allowed"
+    }
+  }

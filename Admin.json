@@ -1,0 +1,51 @@
+{
+    "type": "object",
+    "required": [
+        "name",
+        "email",
+        "password",
+        "mobile"
+    ],
+    "properties": {
+        "name": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 255,
+            "errorMessage":"VALIDATION_ERROR Invalid name"
+        },
+        "email": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 255,
+            "errorMessage":"VALIDATION_ERROR Invalid email"
+        },
+        "password": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 255,
+            "errorMessage":"VALIDATION_ERROR Invalid password"
+        },
+        "mobile": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 255,
+            "errorMessage":"VALIDATION_ERROR Invalid mobile"
+        },
+        "docType": {
+            "type": "string",
+            "const": "admin",
+            "default": "admin",
+            "errorMessage": "VALIDATION_ERROR Invalid docType"
+          }
+    },
+    "additionalProperties": false,
+    "errorMessage": {
+        "required": {
+            "name": "name is required",
+            "email": "email is required",
+            "password": "password is required",
+            "mobile": "mobile is required"
+        },
+        "additionalProperties": "only name, email, password and mobile are allowed"
+    }
+}

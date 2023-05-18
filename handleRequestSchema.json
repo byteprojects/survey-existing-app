@@ -1,0 +1,21 @@
+{
+    "type": "object",
+    "required": [
+        "requestID"
+    ],
+    "properties": {
+        "requestID": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 255,
+            "errorMessage": "VALIDATION_ERROR Invalid requestID"
+        }
+    },
+    "additionalProperties": false,
+    "errorMessage": {
+        "required": {
+            "requestID": "requestID is required"
+        },
+        "additionalProperties": "only requestID is allowed"
+    }
+}
